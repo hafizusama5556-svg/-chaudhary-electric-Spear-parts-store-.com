@@ -17,7 +17,15 @@ h1{font-size:25px;line-height:1.1;margin:13px 0 5px}.urdu{font-size:16px;color:#
 .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:20px}.quick a{text-decoration:none;color:var(--ink);font-size:11px;font-weight:700}.ico{height:47px;border-radius:15px;background:#f2f2f4;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:5px}.quick a:first-child .ico{background:#ffe9e9;color:var(--red)}
 .section{margin:12px 14px;background:#fff;border-radius:20px;padding:18px;box-shadow:0 4px 18px #00000008}.section h2{font-size:14px;margin:0 0 12px}.row{padding:13px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0;padding-bottom:0}.label{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.4px}.value{font-size:14px;font-weight:700;margin-top:4px;line-height:1.4;word-break:break-word}.copy{float:right;border:0;background:#f0f0f2;border-radius:9px;padding:7px 10px;font-weight:700}
 .pay{display:grid;grid-template-columns:1fr;gap:10px}.paybox{border:1px solid var(--line);border-radius:15px;padding:13px}.payname{font-weight:800;font-size:13px}.paydetail{font-size:13px;margin-top:5px;color:#444;line-height:1.45}
-.members{display:grid;gap:10px}.member{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:15px}.member img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#eee}.member-info{flex:1}.member-name{font-weight:800;font-size:14px}.member-role{font-size:12px;color:#888;margin-top:3px}.member-actions{display:flex;gap:6px}.member-actions a{text-decoration:none;background:#f2f2f4;border-radius:9px;padding:7px 9px;font-size:12px;font-weight:700;color:#111}.social{display:grid;grid-template-columns:1fr 1fr;gap:10px}.social a{padding:13px;text-align:center;border-radius:13px;background:#f3f3f5;color:#111;text-decoration:none;font-weight:800;font-size:13px}
+.members{display:grid;gap:10px}.member{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:15px}.member img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#eee}.member-info{flex:1}.member-name{font-weight:800;font-size:14px}.member-role{font-size:12px;color:#888;margin-top:3px}.member-actions{display:flex;gap:6px}.member-actions a{text-decoration:none;background:#f2f2f4;border-radius:9px;padding:7px 9px;font-size:12px;font-weight:700;color:#111}
+
+/* NAYA SOCIAL CSS */
+.social-buttons{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.social-btn{display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;text-decoration:none;color:white;font-weight:600;font-size:15px;transition:transform 0.2s}
+.social-btn svg{width:22px;height:22px}
+.social-btn:hover{transform:scale(1.05)}
+.fb{background:#1877F2}.insta{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)}.tiktok{background:#000}
+
 .share{margin:12px 14px}.share button{width:100%;border:0;border-radius:16px;padding:15px;background:var(--red);color:white;font-size:15px;font-weight:800;box-shadow:0 8px 20px #d4000033}
 .footer{text-align:center;color:#999;font-size:11px;padding:14px}.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%);background:#18191c;color:#fff;padding:10px 16px;border-radius:999px;font-size:12px;display:none}
 </style>
@@ -39,19 +47,7 @@ async function shareCard(){if(navigator.share){await navigator.share({title:"Cha
 <div class="quick">
 <a href="tel:+923347605556"><div class="ico">☎</div>Call</a>
 <a href="https://wa.me/923347605556"><div class="ico">💬</div>WhatsApp</a>
-<a href="#"><div class="ico">🏦</div>Bank</a>
-      <a href="#"><div class="ico">📋</div>Save</a>
-    </div>
-    <div class="row" style="text-align:left;margin-top:8px">
-      <div class="label">Bank & Payment Details</div>
-      <div class="value">
-        
-        
-        <strong>Easypaisa:</strong> 03457602589
-      </div>
-    </div>
-  </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Circular%20Road%20Near%20Rail%20Bazar%20Chowk%20Jhang%20Sadar%20Punjab%20Pakistan"><div class="ico">📍</div>Location</a>
+<a href="https://www.google.com/maps/search/?api=1&query=Circular%20Road%20Near%20Rail%20Bazar%20Chowk%20Jhang%20Sadar%20Punjab%20Pakistan"><div class="ico">📍</div>Location</a>
 <a href="vcard.vcf"><div class="ico">＋</div>Save</a>
 </div>
 </div>
@@ -59,15 +55,10 @@ async function shareCard(){if(navigator.share){await navigator.share({title:"Cha
 <section class="section">
 <h2>Business Information</h2>
 <div class="row"><div class="label">Phone / WhatsApp</div><div class="value">03347605556 <button class="copy" onclick="copyVal('03347605556')">Copy</button></div></div>
+<div class="row"><div class="label">Easypaisa</div><div class="value">03457602589 <button class="copy" onclick="copyVal('03457602589')">Copy</button></div></div>
 <div class="row"><div class="label">Address</div><div class="value">Circular Road, Near Rail Bazar Chowk, Jhang Sadar, Punjab, Pakistan-35200</div></div>
-
-
-   
-<section class="section">
-
 </section>
-
-
+  
 <section class="section">
 <h2>Our Members</h2>
 <div class="members">
@@ -84,74 +75,21 @@ async function shareCard(){if(navigator.share){await navigator.share({title:"Cha
       <a href="#"><div class="ico">🏦</div>Bank</a>
       <a href="#"><div class="ico">📋</div>Save</a>
     </div>
- 
-        
-      </div>
+    <div class="row" style="text-align:left;margin-top:8px">
+      <div class="label">Easypaisa</div>
+      <div class="value">03457612589 <button class="copy" onclick="copyVal('03457612589')">Copy</button></div>
     </div>
   </div>
+
 <!-- Social Media Buttons -->
 <div class="social-buttons">
-  
-  <!-- Facebook -->
   <a href="https://www.facebook.com/share/1Cz7Sk39Zv/?mibextid=wwXIfr" target="_blank" class="social-btn fb">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
     Facebook
   </a>
-
-  <!-- Instagram -->
   <a href="https://www.instagram.com/electric__accessories86?igsh=MTYwYWNxYzF1emMyYg%3D%3D&utm_source=qr" target="_blank" class="social-btn insta">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 5.838c-3.403 0-6.162 2.759-6.162 6.162S8.597 18.162 12 18.162s6.162-2.759 6.162-6.162C18.162 8.597 15.403 5.838 12 5.838Zm0 10.147c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4Zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44Z"/></svg>
     Instagram
   </a>
-
-  <!-- TikTok -->
   <a href="https://www.tiktok.com/@electric.accessor6?_r=1&_t=ZS-98zBIqCsoRo" target="_blank" class="social-btn tiktok">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.4-.05-2.8-.41-4-1.25-1.1 2.76-3.45 4.96-6.34 5.69v-5.08c1.05.62 2.28.98 3.58 1.02V6.04c-1.33-.04-2.67-.43-3.85-1.23-1.31 2.6-4.02 4.36-7.1 4.36V6.7c3.06 0 5.71-1.79 6.9-4.4-.05-1.11-.14-2.22-.25-3.31Z"/></svg>
-    TikTok
-  </a>
-
-</div>
-
-<style>
-.social-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-.social-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  font-size: 15px;
-  transition: transform 0.2s;
-}
-.social-btn svg {
-  width: 22px;
-  height: 22px;
-}
-.social-btn:hover {
-  transform: scale(1.05);
-}
-.fb { background: #1877F2; }
-.insta { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
-.tiktok { background: #000; }
-</style>
-  
-</div>
-</section>
-
-<div class="share"><button onclick="shareCard()">↗ Share Digital Card</button></div>
-<div class="footer">Chaudhary Electric Spare Parts Store</div>
-</div>
-<div class="toast"></div>
-</body></html>
-
-
-<
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.4-.05-2.8-.41-4-1.25-
